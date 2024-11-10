@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class SimpleMovement : MonoBehaviourPunCallbacks
 {
-    public float velocidad = 5;
+    public float velocidad = 0;
 
     // Update is called once per frame
     void Update()
@@ -15,6 +15,7 @@ public class SimpleMovement : MonoBehaviourPunCallbacks
             float movimientoHorizontal = Input.GetAxis("Horizontal");
             float movimientoVertical = Input.GetAxis("Vertical");
 
+            velocidad = 0;
             Vector3 desplazamiento = new Vector3(movimientoHorizontal, 0, movimientoVertical) * velocidad * Time.deltaTime;
 
             transform.Translate(desplazamiento);

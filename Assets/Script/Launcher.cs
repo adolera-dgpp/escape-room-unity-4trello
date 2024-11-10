@@ -19,8 +19,14 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+      
+        
+
         GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position,spawnPoint.rotation);
-        player.GetComponent<PhotonView>().RPC("SetNameText", RpcTarget.AllBuffered, PlayerPrefs.GetString("PlayerName"));
+
+        player.GetComponent<PhotonView>().RPC("SetNameText", RpcTarget.AllBuffered, PlayerPrefs.GetString("playerName"));
+
+
 
         // Cambiar color localmente y luego sincronizar a través de un RPC
         PlayerColor playerColor = player.GetComponent<PlayerColor>();

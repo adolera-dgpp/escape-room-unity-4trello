@@ -15,8 +15,8 @@ public class MainMenuLauncher : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.NickName = usernameInput.text;    
             PlayerPrefs.SetString("PlayerName", usernameInput.text);
-            buttonText.text = "Conectando ...";
-            PhotonNetwork.ConnectUsingSettings();
+            buttonText.text = "JAJAJAJ ...";
+            //PhotonNetwork.ConnectUsingSettings();
         }
     }
 

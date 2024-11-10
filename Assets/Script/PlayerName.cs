@@ -7,7 +7,7 @@ using Photon.Pun;
 public class PlayerName : MonoBehaviourPunCallbacks
 {
     //Tenemos que tener referencia de ese texto
-    public TMP_Text playerName;
+    public TMP_Text playerName = null;
 
     [PunRPC]
     public void SetNameText(string name)
